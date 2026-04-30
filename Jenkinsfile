@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
@@ -12,10 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat '''
-                echo Test Step: Running pytest now
-                C:\Users\abhil\anaconda3\Scripts\conda.exe run -n mlip pytest
-                '''
+                bat 'C:\\Users\\abhil\\anaconda3\\Scripts\\conda.exe run -n mlip pytest'
             }
         }
         stage('Deploy') {
@@ -25,7 +21,6 @@ pipeline {
             }
         }
     }
-
     post {
         always {
             echo 'Pipeline finished.'
