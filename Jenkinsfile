@@ -14,7 +14,7 @@ pipeline {
             steps {
                 bat '''
                 echo Test Step: Running pytest now
-                C:\\Users\\%USERNAME%\\miniconda3\\Scripts\\conda.exe run -n mlip pytest
+                C:\Users\abhil\anaconda3\Scripts\conda.exe run -n mlip pytest
                 '''
             }
         }
